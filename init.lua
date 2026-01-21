@@ -107,3 +107,15 @@ require 'lazy-plugins'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Make Neovim's Normal and other background highlights transparent
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' }) -- For Normal but not Current Window
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' }) -- Popup menu
+-- Add more groups like Comment, SignColumn, etc. as needed [2, 4]
+
+-- Added 12/30/2025
+if vim.env.SSH_CONNECTION then
+  vim.opt.clipboard = 'unnamedplus'
+end

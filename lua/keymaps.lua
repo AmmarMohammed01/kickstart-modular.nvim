@@ -52,3 +52,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+
+--NOTE: 12/25/2025: My own VIM BINDING for :Ex is <Space>e
+vim.keymap.set('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true }) -- Space + e opens :Ex //n means NORMAL MODE!!! OHHH.
+--options to prevent recursive mapping
+--option to hide command output
