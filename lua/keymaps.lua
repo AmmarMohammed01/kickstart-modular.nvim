@@ -54,6 +54,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- vim: ts=2 sts=2 sw=2 et
 
 --NOTE: 12/25/2025: My own VIM BINDING for :Ex is <Space>e
-vim.keymap.set('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true }) -- Space + e opens :Ex //n means NORMAL MODE!!! OHHH.
+vim.keymap.set('n', '<leader>e', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open explorer' }) -- Space + e opens :Ex //n means NORMAL MODE!!! OHHH.
 --options to prevent recursive mapping
 --option to hide command output
+
+-- NOTE: 3/7/2026: My own VIM BINDING for :set nu and :set rnu is <space>
+vim.keymap.set('n', '<leader>nur', ':set rnu<CR>', { noremap = true, silent = true, desc = 'Set relative line numbers' })
+vim.keymap.set('n', '<leader>nuo', ':set nornu<CR>', { noremap = true, silent = true, desc = 'Unset relative line numbers' })
